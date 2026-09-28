@@ -1,0 +1,91 @@
+
+#create the file/Folder in desktop
+#open that in any ide
+1. >cmd:  git clone (that link)  --> takes that git repository to to work
+2. >cmd:  cd directory_name(navigate to that directory)
+
+    after changing that if needed add any files ex: creating a new file(test.txt) in the git folder after cloning inside that folder
+
+
+3. >cmd:  git status           --->(If your current local branch is linked to a remote branch,
+                            then git status will tell you if your local branch is behind or ahead by any commits)
+
+4. >cmd:  git add text.txt     ---> (text.txt is just a file name) here add dosen't mean just adding that file
+                            It means it adds the uppdates whatever made in that file weather deeted or created or updated
+
+5. >cmd:  git status           ----> gives the stage status
+
+6. >cmd:  git commit -m "(any message need to pass here its compulsaruy)"  --> after this also the new file wont be reflected to the git repository
+                                                                            to make it visible we need to push that to git
+                                                                            this makes that file to save that to the local git
+
+7. >cmd:  git push origin main  ---> It pushes to that git repository , it makes the file visible in the git repo
+                             ---> origin (this is the link we used to get that folder in 1st cmd)
+
+
+
+
+8. >cmd:  git pull              ----> Its is like if we updated or created in that partitcular repo using github from that we need to fetch
+                             what are the updates made so that git pull is used
+
+
+
+9. >cmd:  git init              ---> It is used to as if I created a new repo in my local system and then i need to add  the .git file to that directory
+                             for that git init is used
+                             That .git file is used as a bridge between the local git workspace and the remote web github
+
+
+
+10. >cmd: git add .              ---> This is used to add all the files and moves to staging area
+                             (In other words : if we add or make changes for  100 files we cannot add one by oone by adding their names like
+                              (git add text.txt) instead of this we can use just (git add .) this will add all the modified files together at once )
+
+
+
+
+11. >cmd: git remote add origin and (link) ---> this cmd is used to link the newly created git repo in local device
+                                        To do that
+                                        --> 1. we need to create the repo in the website after that
+                                        --> 2. copy that link provided in the quick setup
+                                        --> 3. paste that link in this link place in the command
+            In this is a prblm like when we try to pusht this repo to git from local device well get an error because
+            -in previous one the branch is created as main but now it is created as master so that  this (command : git push origin main) won't work
+            to check that use this command
+
+  >cmd: git branch          --> this command will give the op as *master or *main
+
+               -so that we can do 2 alternatives instead of main give master
+               -or try this command
+  >cmd: git branch -M main  --> this converts the master to main
+
+
+
+HOW BRANCH WORKS AND WHAT IS THE USE OF BRANCH
+        IT IS USED TO CREATE THE SUB BRACNCES TO WORK INDIVUDALLY
+   (In other words : Cosider 5 members in a group in that if 5 members want to work together at a time means they wonty work in the main original branch instad they
+     create the saperete saparete brach each and they work and later they add that to the main branch)
+
+
+1. >cmd: git branch -a          --> used to know how many branches are there and what are that
+
+        AFTER CREATING A NEW BRANCH IN GIT-HUB HERE IT WONT VISIBLE AUTOMATICALL SO THAT USE (git pull) then it will display all the branches available
+
+2. >cmd: git checkut gitbranch1 ---> It is used to switch between branches in the same repo. and  (gitbranch1) is the branch name
+                                      now i have switched from main branch to the gitbranch1
+
+        now check the difference from 2 branches that (main and the gitbranch1)
+        so that chech you are in which branch use >cmd: git branch -a or just checkout like >cmd: git checkout main now you are in main branch
+
+3. >cmd: git diff gitbranch1    ---> This will show what are the difference are there in the main and the another repository created
+                                      (like what are the files changed/updated/added)
+
+4. >cmd: git merge gitbranch1   ---> which one you are going to merge (Here, Iam in main branch from main iam merging the gitbranch1 )
+
+
+5. >cmd: git branch newbranch2  ---> to create new branch (Here newbranch2 is the branch name)
+
+
+CONFLICT FILE : IF TWO MEMBERS TRY TO CHANGE THE FILE AT THE SAME TIME THE GIT WILL CONFUSE(    FOR THAT WE NEED TO SOLVE MANUALLY )
+               -->FOR IF ONE MAIN BRANCH GETS CHANGES FROM 2 OTHER BRANCH at that time git will show the message that (This branch has Conflicts that must be resoved)
+                    for that clich resolve confllicts and then resolve it then click the mark as resolved and click merge pull req in that
+
